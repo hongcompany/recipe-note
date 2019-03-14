@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework_swagger.views import get_swagger_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('tools.urls'))
+    path('api/', include('tools.urls')),
+    path("api/doc", get_swagger_view(title="Recipe Note API Manual"))
 ]

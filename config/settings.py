@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # django-rest-framework
     'rest_framework',
+    "rest_framework_swagger",
     # my apps
     'tools',
 ]
