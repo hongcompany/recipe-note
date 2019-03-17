@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bab969b8-4747-4daf-a09e-569b1928619b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tools/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,62 +14,7 @@
     <favorites_list name="recipe-note" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tools/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tools/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-              <folding>
-                <element signature="e#630#662#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tools/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -87,7 +27,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="feature/TOOL_API" />
       </map>
     </option>
   </component>
@@ -99,9 +39,9 @@
         <option value="$PROJECT_DIR$/tools/models.py" />
         <option value="$PROJECT_DIR$/tools/admin.py" />
         <option value="$PROJECT_DIR$/tools/serializers.py" />
-        <option value="$PROJECT_DIR$/config/settings.py" />
         <option value="$PROJECT_DIR$/tools/urls.py" />
         <option value="$PROJECT_DIR$/tools/views.py" />
+        <option value="$PROJECT_DIR$/config/settings.py" />
         <option value="$PROJECT_DIR$/config/urls.py" />
       </list>
     </option>
@@ -124,16 +64,6 @@
             <path>
               <item name="recipe-note" type="b2602c69:ProjectViewProjectNode" />
               <item name="recipe-note" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="recipe-note" type="b2602c69:ProjectViewProjectNode" />
-              <item name="recipe-note" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="recipe-note" type="b2602c69:ProjectViewProjectNode" />
-              <item name="recipe-note" type="462c0819:PsiDirectoryNode" />
-              <item name="tools" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -196,7 +126,21 @@
       <option name="project" value="LOCAL" />
       <updated>1552575568640</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feature/TOOL_API #3 django-rest-framework 적용&#10;&#10;1. install djangorestframework&#10;    - 1. pip install djangorestframework&#10;    - 2. config/settings.py &#10;        &#10;          INSTALLED_APPS = [ &#10;              ..., &#10;              &quot;rest_framework&quot;,&#10;              ...&#10;          ]&#10;&#10;2. tools/serializers.py 생성&#10;    - 1. ToolsSerializer 생성 ModelSerializer 상속 받으면 모델을 쉽게 JSON화 하기 위한 Serializer가 쉽게 만들어진다.&#10;&#10;3. tools/views.py 수정&#10;    - 1. 도구 목록에 대한 API 제공 ToolList(generic.ListCreateAPIView)&#10;    - 2. 도구 하나에 대한 API 제공 Tool(generic.RetrieveUpdateDestroyAPIView)&#10;&#10;4. tools/urls.py 생성&#10;&#10;from django.urls import path&#10;from rest_framework.urlpatterns import format_suffix_patterns&#10;&#10;from .views import *&#10;&#10;urlpatterns = [&#10;    path('tools/', ToolList.as_view()),&#10;    path('tools/&lt;int:pk&gt;/', ToolsDetail.as_view())&#10;]&#10;&#10;5. config/urls.py&#10;&#10;urlpatterns = [&#10;    ...,&#10;    path(&quot;api/&quot;, include(&quot;tools.urls&quot;))&#10;]">
+      <created>1552577598360</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1552577598360</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feature/TOOL_API #4 django-rest-swagger 적용&#10;&#10;1. install django-rest-swagger&#10;    - 1. pip install django-rest-swagger&#10;    - 2. config/settings.py &#10;        &#10;          INSTALLED_APPS = [ &#10;              ..., &#10;              &quot;rest_framework_swagger&quot;&#10;              ...&#10;          ]&#10;&#10;2. config/urls.py&#10;&#10;#...&#10;from rest_framework_swagger.views import get_swagger_view&#10;&#10;urlpatterns = [&#10;    # ...&#10;    path(&quot;api/doc&quot;, get_swagger_view(title=&quot;Recipe Note API Manual&quot;))&#10;]&#10;&#10;와 개 쉽다... 이러면 swagger-ui 적용되있는 페이지 나옴...">
+      <created>1552578113644</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1552578113644</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -210,10 +154,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.5005599" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4994401" visible="true" weight="0.25305623" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.4994401" visible="true" weight="0.2555012" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.4987775" visible="true" weight="0.3295964" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5012225" side_tool="true" weight="0.3295964" />
@@ -237,7 +180,9 @@
     <MESSAGE value="master first init&#10;&#10;django 프레임워크로 프로젝트 툴만 만듬&#10;&#10;친 명령어 : &#10;django startproject config ." />
     <MESSAGE value="feature/TOOL_API #1 startapp tools&#10;&#10;1. python manage.py startapp tools&#10;2. tools/models.py&#10;class Tool(models.Model):&#10;    name = models.CharField(max_length=200)&#10;&#10;    def __str__(self):&#10;        return self.name &#10;3. settings.py&#10;INSTALLED_APP = [&#10;    # ...&#10;    'tools',&#10;]&#10;4. python manage.py createsuperuser&#10;gurumee92@hong.com&#10;hong0730" />
     <MESSAGE value="feature/TOOL_API #2 make model and admin apply&#10;&#10;1. models.py Tool(name) -&gt; Tools(name (unique)) 변경&#10;2. admin.py 적용 &#10;&#10;class ToolsAdmin(admin.ModelAdmin):&#10;    list_display = ['id', 'name']&#10;    list_editable = ['name']&#10;&#10;&#10;admin.site.register(Tools, ToolsAdmin)&#10;&#10;====배운 명령어&#10;&#10;//db migrate&#10;python manage.py makemigrations tools &#10;python manage.py migrate tools" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature/TOOL_API #2 make model and admin apply&#10;&#10;1. models.py Tool(name) -&gt; Tools(name (unique)) 변경&#10;2. admin.py 적용 &#10;&#10;class ToolsAdmin(admin.ModelAdmin):&#10;    list_display = ['id', 'name']&#10;    list_editable = ['name']&#10;&#10;&#10;admin.site.register(Tools, ToolsAdmin)&#10;&#10;====배운 명령어&#10;&#10;//db migrate&#10;python manage.py makemigrations tools &#10;python manage.py migrate tools" />
+    <MESSAGE value="feature/TOOL_API #3 django-rest-framework 적용&#10;&#10;1. install djangorestframework&#10;    - 1. pip install djangorestframework&#10;    - 2. config/settings.py &#10;        &#10;          INSTALLED_APPS = [ &#10;              ..., &#10;              &quot;rest_framework&quot;,&#10;              ...&#10;          ]&#10;&#10;2. tools/serializers.py 생성&#10;    - 1. ToolsSerializer 생성 ModelSerializer 상속 받으면 모델을 쉽게 JSON화 하기 위한 Serializer가 쉽게 만들어진다.&#10;&#10;3. tools/views.py 수정&#10;    - 1. 도구 목록에 대한 API 제공 ToolList(generic.ListCreateAPIView)&#10;    - 2. 도구 하나에 대한 API 제공 Tool(generic.RetrieveUpdateDestroyAPIView)&#10;&#10;4. tools/urls.py 생성&#10;&#10;from django.urls import path&#10;from rest_framework.urlpatterns import format_suffix_patterns&#10;&#10;from .views import *&#10;&#10;urlpatterns = [&#10;    path('tools/', ToolList.as_view()),&#10;    path('tools/&lt;int:pk&gt;/', ToolsDetail.as_view())&#10;]&#10;&#10;5. config/urls.py&#10;&#10;urlpatterns = [&#10;    ...,&#10;    path(&quot;api/&quot;, include(&quot;tools.urls&quot;))&#10;]" />
+    <MESSAGE value="feature/TOOL_API #4 django-rest-swagger 적용&#10;&#10;1. install django-rest-swagger&#10;    - 1. pip install django-rest-swagger&#10;    - 2. config/settings.py &#10;        &#10;          INSTALLED_APPS = [ &#10;              ..., &#10;              &quot;rest_framework_swagger&quot;&#10;              ...&#10;          ]&#10;&#10;2. config/urls.py&#10;&#10;#...&#10;from rest_framework_swagger.views import get_swagger_view&#10;&#10;urlpatterns = [&#10;    # ...&#10;    path(&quot;api/doc&quot;, get_swagger_view(title=&quot;Recipe Note API Manual&quot;))&#10;]&#10;&#10;와 개 쉽다... 이러면 swagger-ui 적용되있는 페이지 나옴..." />
+    <option name="LAST_COMMIT_MESSAGE" value="feature/TOOL_API #4 django-rest-swagger 적용&#10;&#10;1. install django-rest-swagger&#10;    - 1. pip install django-rest-swagger&#10;    - 2. config/settings.py &#10;        &#10;          INSTALLED_APPS = [ &#10;              ..., &#10;              &quot;rest_framework_swagger&quot;&#10;              ...&#10;          ]&#10;&#10;2. config/urls.py&#10;&#10;#...&#10;from rest_framework_swagger.views import get_swagger_view&#10;&#10;urlpatterns = [&#10;    # ...&#10;    path(&quot;api/doc&quot;, get_swagger_view(title=&quot;Recipe Note API Manual&quot;))&#10;]&#10;&#10;와 개 쉽다... 이러면 swagger-ui 적용되있는 페이지 나옴..." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/manage.py">
@@ -275,30 +220,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tools/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -326,13 +247,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tools/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework_swagger/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        <state relative-caret-position="456">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="e#630#662#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
         </state>
       </provider>
     </entry>
