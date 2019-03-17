@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bab969b8-4747-4daf-a09e-569b1928619b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ingredients/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ingredients/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ingredients/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ingredients/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +28,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" selection-start-line="15" selection-end-line="24" selection-end-column="1" />
+              <folding>
+                <element signature="e#630#662#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ingredients/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
@@ -38,24 +52,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ingredients/admin.py">
+        <entry file="file://$PROJECT_DIR$/ingredients/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+            <state relative-caret-position="304">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
-                <element signature="e#0#32#0" expanded="true" />
+                <element signature="e#0#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tools/admin.py">
+        <entry file="file://$PROJECT_DIR$/ingredients/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" selection-start-line="6" selection-end-line="11" selection-end-column="38" />
+            <state>
+              <caret selection-end-line="8" selection-end-column="1" />
               <folding>
-                <element signature="e#0#32#0" expanded="true" />
+                <element signature="e#0#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -88,11 +102,13 @@
         <option value="$PROJECT_DIR$/tools/serializers.py" />
         <option value="$PROJECT_DIR$/tools/urls.py" />
         <option value="$PROJECT_DIR$/tools/views.py" />
-        <option value="$PROJECT_DIR$/config/urls.py" />
         <option value="$PROJECT_DIR$/config/settings.py" />
         <option value="$PROJECT_DIR$/ingredients/models.py" />
         <option value="$PROJECT_DIR$/ingredients/admin.py" />
         <option value="$PROJECT_DIR$/ingredients/serializers.py" />
+        <option value="$PROJECT_DIR$/ingredients/views.py" />
+        <option value="$PROJECT_DIR$/ingredients/urls.py" />
+        <option value="$PROJECT_DIR$/config/urls.py" />
       </list>
     </option>
   </component>
@@ -118,12 +134,7 @@
             <path>
               <item name="recipe-note" type="b2602c69:ProjectViewProjectNode" />
               <item name="recipe-note" type="462c0819:PsiDirectoryNode" />
-              <item name="ingredients" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="recipe-note" type="b2602c69:ProjectViewProjectNode" />
-              <item name="recipe-note" type="462c0819:PsiDirectoryNode" />
-              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -134,6 +145,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gurumee\PycharmProjects\recipe-note\ingredients" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -221,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1552833152965</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feature/INGREDIENTS_API #4 Serializer 클래스 생성하기&#10;&#10;1. IngredientsSerializer 생성&#10;&#10;모델 클래스를 API 형태로 보여주는 Serializer 클래스 생성&#10;&#10;- ingredients/serializers.py&#10;    from .models import Ingredients&#10;    from rest_framework import serializers&#10;    &#10;    &#10;    class IngredientsSerializer(serializers.ModelSerializer):&#10;        class Meta:&#10;            model = Ingredients&#10;            fields = '__all__'">
+      <created>1552833800669</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1552833800669</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -238,7 +261,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.5005599" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.4994401" visible="true" weight="0.25427872" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4994401" visible="true" weight="0.25427872" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.4987775" visible="true" weight="0.3295964" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5012225" side_tool="true" weight="0.3295964" />
@@ -267,7 +290,8 @@
     <MESSAGE value="feature/INGREDIENTS_API #1 앱 세팅&#10;&#10;1. app 생성&#10;&#10;python manage.py startapp ingredients&#10;&#10;2. config/settings.py 수정&#10;&#10;INSTALLED_APPS = [&#10;    ...&#10;    tools,&#10;    ingredients&#10;]" />
     <MESSAGE value="feature/INGREDIENTS_API #2 모델 클래스 생성&#10;&#10;1. 모델 클래스 생성&#10;&#10;- ingredients/models.py &#10;&#10;    from django.db import models&#10;&#10;    class Ingredients(models.Model):&#10;        name = models.CharField(max_length=200, unique=True)&#10;    &#10;        def __str__(self):&#10;            return self.name&#10;&#10;2. ORM 마이그레이션&#10;&#10;$ python manage.py makemigrations ingredients&#10;$ python manage.py migrate ingredients" />
     <MESSAGE value="feature/INGREDIENTS_API #3 관리자 페이지 등록하기&#10;&#10;1. IngredientsAdmin 생성&#10;&#10;- ingredients/admin.py &#10;&#10;    from django.contrib import admin&#10;    from .models import Ingredients&#10;    &#10;    class IngredientsAdmin(admin.ModelAdmin):&#10;        list_display = ['id', 'name']&#10;        list_editable = ['name']&#10;    &#10;    admin.site.register(Ingredients, IngredientsAdmin)" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature/INGREDIENTS_API #3 관리자 페이지 등록하기&#10;&#10;1. IngredientsAdmin 생성&#10;&#10;- ingredients/admin.py &#10;&#10;    from django.contrib import admin&#10;    from .models import Ingredients&#10;    &#10;    class IngredientsAdmin(admin.ModelAdmin):&#10;        list_display = ['id', 'name']&#10;        list_editable = ['name']&#10;    &#10;    admin.site.register(Ingredients, IngredientsAdmin)" />
+    <MESSAGE value="feature/INGREDIENTS_API #4 Serializer 클래스 생성하기&#10;&#10;1. IngredientsSerializer 생성&#10;&#10;모델 클래스를 API 형태로 보여주는 Serializer 클래스 생성&#10;&#10;- ingredients/serializers.py&#10;    from .models import Ingredients&#10;    from rest_framework import serializers&#10;    &#10;    &#10;    class IngredientsSerializer(serializers.ModelSerializer):&#10;        class Meta:&#10;            model = Ingredients&#10;            fields = '__all__'" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature/INGREDIENTS_API #4 Serializer 클래스 생성하기&#10;&#10;1. IngredientsSerializer 생성&#10;&#10;모델 클래스를 API 형태로 보여주는 Serializer 클래스 생성&#10;&#10;- ingredients/serializers.py&#10;    from .models import Ingredients&#10;    from rest_framework import serializers&#10;    &#10;    &#10;    class IngredientsSerializer(serializers.ModelSerializer):&#10;        class Meta:&#10;            model = Ingredients&#10;            fields = '__all__'" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/manage.py">
@@ -305,16 +329,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tools/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -336,16 +350,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#630#662#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -396,6 +400,46 @@
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" selection-end-line="15" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ingredients/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ingredients/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="8" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" selection-start-line="15" selection-end-line="24" selection-end-column="1" />
+          <folding>
+            <element signature="e#630#662#0" expanded="true" />
           </folding>
         </state>
       </provider>
