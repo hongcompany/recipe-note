@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bab969b8-4747-4daf-a09e-569b1928619b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ingredients/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ingredients/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ingredients/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,11 +16,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ingredients/models.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" selection-end-line="9" selection-end-column="24" />
+            <state relative-caret-position="116">
+              <caret line="32" selection-start-line="32" selection-end-line="46" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ingredients/serializers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ingredients/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tools/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" selection-start-line="6" selection-end-line="11" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,6 +91,8 @@
         <option value="$PROJECT_DIR$/config/urls.py" />
         <option value="$PROJECT_DIR$/config/settings.py" />
         <option value="$PROJECT_DIR$/ingredients/models.py" />
+        <option value="$PROJECT_DIR$/ingredients/admin.py" />
+        <option value="$PROJECT_DIR$/ingredients/serializers.py" />
       </list>
     </option>
   </component>
@@ -76,11 +114,6 @@
             <path>
               <item name="recipe-note" type="b2602c69:ProjectViewProjectNode" />
               <item name="recipe-note" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="recipe-note" type="b2602c69:ProjectViewProjectNode" />
-              <item name="recipe-note" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="recipe-note" type="b2602c69:ProjectViewProjectNode" />
@@ -174,7 +207,21 @@
       <option name="project" value="LOCAL" />
       <updated>1552831865010</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feature/INGREDIENTS_API #2 모델 클래스 생성&#10;&#10;1. 모델 클래스 생성&#10;&#10;- ingredients/models.py &#10;&#10;    from django.db import models&#10;&#10;    class Ingredients(models.Model):&#10;        name = models.CharField(max_length=200, unique=True)&#10;    &#10;        def __str__(self):&#10;            return self.name&#10;&#10;2. ORM 마이그레이션&#10;&#10;$ python manage.py makemigrations ingredients&#10;$ python manage.py migrate ingredients">
+      <created>1552832430016</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1552832430016</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feature/INGREDIENTS_API #3 관리자 페이지 등록하기&#10;&#10;1. IngredientsAdmin 생성&#10;&#10;- ingredients/admin.py &#10;&#10;    from django.contrib import admin&#10;    from .models import Ingredients&#10;    &#10;    class IngredientsAdmin(admin.ModelAdmin):&#10;        list_display = ['id', 'name']&#10;        list_editable = ['name']&#10;    &#10;    admin.site.register(Ingredients, IngredientsAdmin)">
+      <created>1552833152965</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1552833152965</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -188,11 +235,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1696" height="1026" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.5005599" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4994401" visible="true" weight="0.2555012" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.4994401" visible="true" weight="0.25427872" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" sideWeight="0.4987775" visible="true" weight="0.3295964" />
+      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.4987775" visible="true" weight="0.3295964" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5012225" side_tool="true" weight="0.3295964" />
       <window_info anchor="bottom" id="Python Console" order="2" weight="0.32922733" />
       <window_info anchor="bottom" id="Message" order="3" />
@@ -217,7 +265,9 @@
     <MESSAGE value="feature/TOOL_API #3 django-rest-framework 적용&#10;&#10;1. install djangorestframework&#10;    - 1. pip install djangorestframework&#10;    - 2. config/settings.py &#10;        &#10;          INSTALLED_APPS = [ &#10;              ..., &#10;              &quot;rest_framework&quot;,&#10;              ...&#10;          ]&#10;&#10;2. tools/serializers.py 생성&#10;    - 1. ToolsSerializer 생성 ModelSerializer 상속 받으면 모델을 쉽게 JSON화 하기 위한 Serializer가 쉽게 만들어진다.&#10;&#10;3. tools/views.py 수정&#10;    - 1. 도구 목록에 대한 API 제공 ToolList(generic.ListCreateAPIView)&#10;    - 2. 도구 하나에 대한 API 제공 Tool(generic.RetrieveUpdateDestroyAPIView)&#10;&#10;4. tools/urls.py 생성&#10;&#10;from django.urls import path&#10;from rest_framework.urlpatterns import format_suffix_patterns&#10;&#10;from .views import *&#10;&#10;urlpatterns = [&#10;    path('tools/', ToolList.as_view()),&#10;    path('tools/&lt;int:pk&gt;/', ToolsDetail.as_view())&#10;]&#10;&#10;5. config/urls.py&#10;&#10;urlpatterns = [&#10;    ...,&#10;    path(&quot;api/&quot;, include(&quot;tools.urls&quot;))&#10;]" />
     <MESSAGE value="feature/TOOL_API #4 django-rest-swagger 적용&#10;&#10;1. install django-rest-swagger&#10;    - 1. pip install django-rest-swagger&#10;    - 2. config/settings.py &#10;        &#10;          INSTALLED_APPS = [ &#10;              ..., &#10;              &quot;rest_framework_swagger&quot;&#10;              ...&#10;          ]&#10;&#10;2. config/urls.py&#10;&#10;#...&#10;from rest_framework_swagger.views import get_swagger_view&#10;&#10;urlpatterns = [&#10;    # ...&#10;    path(&quot;api/doc&quot;, get_swagger_view(title=&quot;Recipe Note API Manual&quot;))&#10;]&#10;&#10;와 개 쉽다... 이러면 swagger-ui 적용되있는 페이지 나옴..." />
     <MESSAGE value="feature/INGREDIENTS_API #1 앱 세팅&#10;&#10;1. app 생성&#10;&#10;python manage.py startapp ingredients&#10;&#10;2. config/settings.py 수정&#10;&#10;INSTALLED_APPS = [&#10;    ...&#10;    tools,&#10;    ingredients&#10;]" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature/INGREDIENTS_API #1 앱 세팅&#10;&#10;1. app 생성&#10;&#10;python manage.py startapp ingredients&#10;&#10;2. config/settings.py 수정&#10;&#10;INSTALLED_APPS = [&#10;    ...&#10;    tools,&#10;    ingredients&#10;]" />
+    <MESSAGE value="feature/INGREDIENTS_API #2 모델 클래스 생성&#10;&#10;1. 모델 클래스 생성&#10;&#10;- ingredients/models.py &#10;&#10;    from django.db import models&#10;&#10;    class Ingredients(models.Model):&#10;        name = models.CharField(max_length=200, unique=True)&#10;    &#10;        def __str__(self):&#10;            return self.name&#10;&#10;2. ORM 마이그레이션&#10;&#10;$ python manage.py makemigrations ingredients&#10;$ python manage.py migrate ingredients" />
+    <MESSAGE value="feature/INGREDIENTS_API #3 관리자 페이지 등록하기&#10;&#10;1. IngredientsAdmin 생성&#10;&#10;- ingredients/admin.py &#10;&#10;    from django.contrib import admin&#10;    from .models import Ingredients&#10;    &#10;    class IngredientsAdmin(admin.ModelAdmin):&#10;        list_display = ['id', 'name']&#10;        list_editable = ['name']&#10;    &#10;    admin.site.register(Ingredients, IngredientsAdmin)" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature/INGREDIENTS_API #3 관리자 페이지 등록하기&#10;&#10;1. IngredientsAdmin 생성&#10;&#10;- ingredients/admin.py &#10;&#10;    from django.contrib import admin&#10;    from .models import Ingredients&#10;    &#10;    class IngredientsAdmin(admin.ModelAdmin):&#10;        list_display = ['id', 'name']&#10;        list_editable = ['name']&#10;    &#10;    admin.site.register(Ingredients, IngredientsAdmin)" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/manage.py">
@@ -282,16 +332,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework_swagger/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -309,13 +349,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tools/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -325,8 +358,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ingredients/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" selection-end-line="9" selection-end-column="24" />
+        <state relative-caret-position="190">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" selection-start-line="6" selection-end-line="11" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ingredients/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="32" selection-start-line="32" selection-end-line="46" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ingredients/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
