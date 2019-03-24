@@ -3,6 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="bab969b8-4747-4daf-a09e-569b1928619b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/categories/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/categories/migrations/0002_auto_20190324_1125.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/categories/migrations/0003_auto_20190324_1221.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ingredients/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/recipes/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/recipes/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/migrations/0002_auto_20190314_2354.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/migrations/0003_auto_20190314_2356.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,35 +26,23 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/categories/views.py">
+        <entry file="file://$PROJECT_DIR$/recipes/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="56">
+              <caret line="67" column="34" selection-start-line="60" selection-end-line="78" selection-end-column="58" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#0#21#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/categories/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/categories/serializers.py">
+        <entry file="file://$PROJECT_DIR$/recipes/admin.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <folding>
-                <element signature="e#0#38#0" expanded="true" />
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,13 +80,15 @@
         <option value="$PROJECT_DIR$/ingredients/serializers.py" />
         <option value="$PROJECT_DIR$/ingredients/views.py" />
         <option value="$PROJECT_DIR$/ingredients/urls.py" />
-        <option value="$PROJECT_DIR$/config/settings.py" />
         <option value="$PROJECT_DIR$/categories/admin.py" />
         <option value="$PROJECT_DIR$/config/urls.py" />
         <option value="$PROJECT_DIR$/categories/urls.py" />
         <option value="$PROJECT_DIR$/categories/serializers.py" />
         <option value="$PROJECT_DIR$/categories/views.py" />
         <option value="$PROJECT_DIR$/categories/models.py" />
+        <option value="$PROJECT_DIR$/config/settings.py" />
+        <option value="$PROJECT_DIR$/recipes/admin.py" />
+        <option value="$PROJECT_DIR$/recipes/models.py" />
       </list>
     </option>
   </component>
@@ -111,6 +111,11 @@
             <path>
               <item name="recipe-note" type="b2602c69:ProjectViewProjectNode" />
               <item name="recipe-note" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="recipe-note" type="b2602c69:ProjectViewProjectNode" />
+              <item name="recipe-note" type="462c0819:PsiDirectoryNode" />
+              <item name="recipes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -241,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553398285154</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="feature/RECIPE_API #1 app setting&#10;&#10;1. python manage.py startapp recipes&#10;    - 위 명령어 실행에 따른 생성 파일들">
+      <created>1553399758275</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1553399758275</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView">
@@ -258,10 +270,10 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.5005599" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.4994401" visible="true" weight="0.26652452" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4994401" visible="true" weight="0.26652452" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49840087" visible="true" weight="0.3286334" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" sideWeight="0.49840087" visible="true" weight="0.3286334" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50159913" side_tool="true" weight="0.3286334" />
       <window_info anchor="bottom" id="Python Console" order="3" weight="0.32922733" />
       <window_info anchor="bottom" id="Message" order="4" />
@@ -314,7 +326,8 @@
     <MESSAGE value="feature/CATEGORY_API #1 카테고리 앱 생성&#10;&#10;1. python manage.py startapp categories&#10;- 그로 인해 생긴 코드들." />
     <MESSAGE value="feature/CATEGORY_API #2 카테고리 모델 생성 및 어드민 연결&#10;&#10;1. categories/models.py 카테고리 모델 생성(유저는 연결x)&#10;&#10;    from django.db import models&#10;    &#10;    &#10;    # Create your models here.&#10;    from django.utils.datetime_safe import datetime&#10;    &#10;    &#10;    class Category(models.Model):&#10;        name = models.CharField(max_length=200)&#10;        created_at = models.DateTimeField(default=datetime.now())&#10;        is_deleted = models.BooleanField(default=False)&#10;        owner = models.CharField(max_length=200, unique=True)  # 추후 user 로 변경&#10;    &#10;        def __str__(self):&#10;            return &quot;name: %s, created_at: %s. owner: %s&quot; % (self.name, self.created_at, self.owner)&#10;&#10;2. categories/admin.py 어드민 연결. 추후 어드민 커스터마이징 필요&#10;    &#10;    from django.contrib import admin&#10;    &#10;    # Register your models here.&#10;    from .models import Category&#10;    &#10;    &#10;    class CategoriesAdmin(admin.ModelAdmin):&#10;        list_display = ['id', 'name', 'created_at', 'is_deleted', 'owner']&#10;        list_editable = ['name', 'is_deleted']&#10;    &#10;    &#10;    admin.site.register(Category, CategoriesAdmin)&#10;    &#10;3. config/settings.py 프로젝트 연결&#10;&#10;    INSTALLED_APPS = [&#10;        # ...,&#10;        'categories'&#10;    ]&#10;    &#10;4. 모델 마이그레이션&#10;&#10;     python manage.py makemigrations&#10;     python manage.py migrate" />
     <MESSAGE value="feature/CATEGORY_API #3 Serializers 및 View 만들기&#10;&#10;1. categories/serializers.py API 에서 모델을 JSON 직렬화시키는 CategorySerializer 생성 &#10;&#10;    from rest_framework import serializers&#10;    &#10;    from .models import Category&#10;    &#10;    &#10;    class CategorySerializer(serializers.ModelSerializer):&#10;        class Meta:&#10;            model = Category&#10;            fields = '__all__'&#10;&#10;2. categories/views.py API 결과를 반환해주는 View 클래스들 생성(generic 이용)&#10;&#10;    from rest_framework import generics&#10;    &#10;    # Create your views here.&#10;    from .models import Category&#10;    from .serializers import CategorySerializer&#10;    &#10;    &#10;    class CategoryList(generics.ListCreateAPIView):&#10;        queryset = Category.objects.all()&#10;        serializer_class = CategorySerializer&#10;    &#10;    &#10;    class CategoryListByOwner(generics.ListAPIView):&#10;        serializer_class = CategorySerializer&#10;    &#10;        def get_queryset(self):&#10;            owner = self.kwargs['owner']&#10;            return Category.objects.filter(owner=owner, is_deleted=False).order_by('-created_at')&#10;    &#10;    &#10;    class CategoryDetail(generics.RetrieveUpdateDestroyAPIView):&#10;        queryset = Category.objects.all()&#10;        serializer_class = CategorySerializer&#10;&#10;3. categories/urls.py url 연결&#10;&#10;    from django.urls import path&#10;    from rest_framework.urlpatterns import format_suffix_patterns&#10;    &#10;    from .views import *&#10;    &#10;    urlpatterns = [&#10;        path('categories/', CategoryList.as_view()),                     # 카테고리 전체 목록, 1개 생성 &#10;        path('categories/&lt;slug:owner&gt;', CategoryListByOwner.as_view()),  # owner 의 카테고리 목록&#10;        path('categories/&lt;int:pk&gt;/', CategoryDetail.as_view())           # id 로 get, put, patch, delete 지원&#10;    ]&#10;    &#10;4. conf/urls.py 앱에서 연결된 뷰들을 전체 프로젝트에 연결&#10;&#10;urlpatterns = [&#10;    # ...,&#10;    path('api/', include('categories.urls')),&#10;    # ...&#10;]&#10;&#10;* categories/models.py 수정 owner 유니크 설정 제거..." />
-    <option name="LAST_COMMIT_MESSAGE" value="feature/CATEGORY_API #3 Serializers 및 View 만들기&#10;&#10;1. categories/serializers.py API 에서 모델을 JSON 직렬화시키는 CategorySerializer 생성 &#10;&#10;    from rest_framework import serializers&#10;    &#10;    from .models import Category&#10;    &#10;    &#10;    class CategorySerializer(serializers.ModelSerializer):&#10;        class Meta:&#10;            model = Category&#10;            fields = '__all__'&#10;&#10;2. categories/views.py API 결과를 반환해주는 View 클래스들 생성(generic 이용)&#10;&#10;    from rest_framework import generics&#10;    &#10;    # Create your views here.&#10;    from .models import Category&#10;    from .serializers import CategorySerializer&#10;    &#10;    &#10;    class CategoryList(generics.ListCreateAPIView):&#10;        queryset = Category.objects.all()&#10;        serializer_class = CategorySerializer&#10;    &#10;    &#10;    class CategoryListByOwner(generics.ListAPIView):&#10;        serializer_class = CategorySerializer&#10;    &#10;        def get_queryset(self):&#10;            owner = self.kwargs['owner']&#10;            return Category.objects.filter(owner=owner, is_deleted=False).order_by('-created_at')&#10;    &#10;    &#10;    class CategoryDetail(generics.RetrieveUpdateDestroyAPIView):&#10;        queryset = Category.objects.all()&#10;        serializer_class = CategorySerializer&#10;&#10;3. categories/urls.py url 연결&#10;&#10;    from django.urls import path&#10;    from rest_framework.urlpatterns import format_suffix_patterns&#10;    &#10;    from .views import *&#10;    &#10;    urlpatterns = [&#10;        path('categories/', CategoryList.as_view()),                     # 카테고리 전체 목록, 1개 생성 &#10;        path('categories/&lt;slug:owner&gt;', CategoryListByOwner.as_view()),  # owner 의 카테고리 목록&#10;        path('categories/&lt;int:pk&gt;/', CategoryDetail.as_view())           # id 로 get, put, patch, delete 지원&#10;    ]&#10;    &#10;4. conf/urls.py 앱에서 연결된 뷰들을 전체 프로젝트에 연결&#10;&#10;urlpatterns = [&#10;    # ...,&#10;    path('api/', include('categories.urls')),&#10;    # ...&#10;]&#10;&#10;* categories/models.py 수정 owner 유니크 설정 제거..." />
+    <MESSAGE value="feature/RECIPE_API #1 app setting&#10;&#10;1. python manage.py startapp recipes&#10;    - 위 명령어 실행에 따른 생성 파일들" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature/RECIPE_API #1 app setting&#10;&#10;1. python manage.py startapp recipes&#10;    - 위 명령어 실행에 따른 생성 파일들" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/manage.py">
@@ -369,23 +382,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ingredients/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ingredients/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ingredients/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -425,13 +421,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/fields/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/categories/admin.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -508,10 +497,83 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/categories/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="399">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ingredients/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ingredients/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="11" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recipes/migrations/0004_auto_20190324_1447.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recipes/migrations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recipes/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/migrations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recipes/views.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/migrations/loader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/management/commands/migrate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recipes/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recipes/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="67" column="34" selection-start-line="60" selection-end-line="78" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
