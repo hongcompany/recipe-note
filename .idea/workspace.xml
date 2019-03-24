@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bab969b8-4747-4daf-a09e-569b1928619b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ingredients/urls.py" afterDir="false" />
+    <list default="true" id="bab969b8-4747-4daf-a09e-569b1928619b" name="Default Changelist" comment="feature/CATEGORY_API #1 카테고리 앱 생성&#10;&#10;1. python manage.py startapp categories&#10;- 그로 인해 생긴 코드들.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ingredients/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ingredients/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/categories/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/categories/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/categories/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/categories/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,56 +21,69 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="32" selection-start-line="32" selection-end-line="46" selection-end-column="1" />
+            <state relative-caret-position="19">
+              <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/urls.py">
+        <entry file="file://$PROJECT_DIR$/categories/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="15" selection-start-line="15" selection-end-line="24" selection-end-column="1" />
-              <folding>
-                <element signature="e#630#662#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ingredients/serializers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ingredients/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ingredients/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="8" selection-end-column="1" />
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/categories/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
+              <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tools/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tools/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" selection-start-line="3" selection-end-line="11" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tools/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="6" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -88,7 +101,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/TOOL_API" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
   </component>
@@ -102,21 +115,22 @@
         <option value="$PROJECT_DIR$/tools/serializers.py" />
         <option value="$PROJECT_DIR$/tools/urls.py" />
         <option value="$PROJECT_DIR$/tools/views.py" />
-        <option value="$PROJECT_DIR$/config/settings.py" />
         <option value="$PROJECT_DIR$/ingredients/models.py" />
         <option value="$PROJECT_DIR$/ingredients/admin.py" />
         <option value="$PROJECT_DIR$/ingredients/serializers.py" />
         <option value="$PROJECT_DIR$/ingredients/views.py" />
         <option value="$PROJECT_DIR$/ingredients/urls.py" />
         <option value="$PROJECT_DIR$/config/urls.py" />
+        <option value="$PROJECT_DIR$/config/settings.py" />
+        <option value="$PROJECT_DIR$/categories/admin.py" />
+        <option value="$PROJECT_DIR$/categories/models.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1524" />
-    <option name="y" value="51" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -124,6 +138,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -134,13 +149,22 @@
             <path>
               <item name="recipe-note" type="b2602c69:ProjectViewProjectNode" />
               <item name="recipe-note" type="462c0819:PsiDirectoryNode" />
+              <item name="categories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="recipe-note" type="b2602c69:ProjectViewProjectNode" />
+              <item name="recipe-note" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="recipe-note" type="b2602c69:ProjectViewProjectNode" />
+              <item name="recipe-note" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -244,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1552833800669</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="feature/CATEGORY_API #1 카테고리 앱 생성&#10;&#10;1. python manage.py startapp categories&#10;- 그로 인해 생긴 코드들.">
+      <created>1553393132914</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1553393132914</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -257,23 +288,24 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.5005599" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4994401" visible="true" weight="0.25427872" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4994401" visible="true" weight="0.54704595" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.4987775" visible="true" weight="0.3295964" />
-      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5012225" side_tool="true" weight="0.3295964" />
-      <window_info anchor="bottom" id="Python Console" order="2" weight="0.32922733" />
-      <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Find" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="5" weight="0.3295964" />
-      <window_info anchor="bottom" id="Run" order="6" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" weight="0.32922733" />
+      <window_info anchor="bottom" id="Messages" order="0" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" sideWeight="0.49840087" visible="true" weight="0.33187294" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50159913" side_tool="true" weight="0.3286334" />
+      <window_info anchor="bottom" id="Python Console" order="3" weight="0.32922733" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Find" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="6" weight="0.3295964" />
+      <window_info anchor="bottom" id="Run" order="7" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" weight="0.32922733" />
       <window_info anchor="right" id="R Graphics" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="R Packages" order="2" />
@@ -291,7 +323,8 @@
     <MESSAGE value="feature/INGREDIENTS_API #2 모델 클래스 생성&#10;&#10;1. 모델 클래스 생성&#10;&#10;- ingredients/models.py &#10;&#10;    from django.db import models&#10;&#10;    class Ingredients(models.Model):&#10;        name = models.CharField(max_length=200, unique=True)&#10;    &#10;        def __str__(self):&#10;            return self.name&#10;&#10;2. ORM 마이그레이션&#10;&#10;$ python manage.py makemigrations ingredients&#10;$ python manage.py migrate ingredients" />
     <MESSAGE value="feature/INGREDIENTS_API #3 관리자 페이지 등록하기&#10;&#10;1. IngredientsAdmin 생성&#10;&#10;- ingredients/admin.py &#10;&#10;    from django.contrib import admin&#10;    from .models import Ingredients&#10;    &#10;    class IngredientsAdmin(admin.ModelAdmin):&#10;        list_display = ['id', 'name']&#10;        list_editable = ['name']&#10;    &#10;    admin.site.register(Ingredients, IngredientsAdmin)" />
     <MESSAGE value="feature/INGREDIENTS_API #4 Serializer 클래스 생성하기&#10;&#10;1. IngredientsSerializer 생성&#10;&#10;모델 클래스를 API 형태로 보여주는 Serializer 클래스 생성&#10;&#10;- ingredients/serializers.py&#10;    from .models import Ingredients&#10;    from rest_framework import serializers&#10;    &#10;    &#10;    class IngredientsSerializer(serializers.ModelSerializer):&#10;        class Meta:&#10;            model = Ingredients&#10;            fields = '__all__'" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature/INGREDIENTS_API #4 Serializer 클래스 생성하기&#10;&#10;1. IngredientsSerializer 생성&#10;&#10;모델 클래스를 API 형태로 보여주는 Serializer 클래스 생성&#10;&#10;- ingredients/serializers.py&#10;    from .models import Ingredients&#10;    from rest_framework import serializers&#10;    &#10;    &#10;    class IngredientsSerializer(serializers.ModelSerializer):&#10;        class Meta:&#10;            model = Ingredients&#10;            fields = '__all__'" />
+    <MESSAGE value="feature/CATEGORY_API #1 카테고리 앱 생성&#10;&#10;1. python manage.py startapp categories&#10;- 그로 인해 생긴 코드들." />
+    <option name="LAST_COMMIT_MESSAGE" value="feature/CATEGORY_API #1 카테고리 앱 생성&#10;&#10;1. python manage.py startapp categories&#10;- 그로 인해 생긴 코드들." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/manage.py">
@@ -339,24 +372,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework_swagger/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" selection-start-line="5" selection-end-line="9" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -367,16 +386,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" selection-start-line="6" selection-end-line="11" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ingredients/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -384,13 +393,6 @@
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="32" selection-start-line="32" selection-end-line="46" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -434,12 +436,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tools/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="6" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="11" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/categories/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/urls.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
+          <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/fields/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/categories/models.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="15" selection-start-line="15" selection-end-line="24" selection-end-column="1" />
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
           <folding>
-            <element signature="e#630#662#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
