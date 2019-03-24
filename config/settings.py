@@ -43,9 +43,11 @@ INSTALLED_APPS = [
     "rest_framework_swagger",
     # my apps
     'tools',
+
     'ingredients',
     'categories',
     "recipes",
+
 ]
 
 MIDDLEWARE = [
