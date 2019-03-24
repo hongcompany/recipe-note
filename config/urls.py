@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('tools.urls')),
     path('api/', include('ingredients.urls')),
+    path('api/', include('categories.urls')),
     path("api/doc", get_swagger_view(title="Recipe Note API Manual"))
 ]
