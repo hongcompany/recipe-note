@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bab969b8-4747-4daf-a09e-569b1928619b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/categories/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/categories/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/categories/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/categories/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/categories/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="93" lean-forward="true" selection-start-line="17" selection-start-column="93" selection-end-line="17" selection-end-column="93" />
+            <state relative-caret-position="342">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -36,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/categories/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -68,7 +63,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="feature/CATEGORY_API" />
       </map>
     </option>
   </component>
@@ -116,16 +111,6 @@
             <path>
               <item name="recipe-note" type="b2602c69:ProjectViewProjectNode" />
               <item name="recipe-note" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="recipe-note" type="b2602c69:ProjectViewProjectNode" />
-              <item name="recipe-note" type="462c0819:PsiDirectoryNode" />
-              <item name="categories" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="recipe-note" type="b2602c69:ProjectViewProjectNode" />
-              <item name="recipe-note" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -249,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553394583602</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="feature/CATEGORY_API #3 Serializers 및 View 만들기&#10;&#10;1. categories/serializers.py API 에서 모델을 JSON 직렬화시키는 CategorySerializer 생성 &#10;&#10;    from rest_framework import serializers&#10;    &#10;    from .models import Category&#10;    &#10;    &#10;    class CategorySerializer(serializers.ModelSerializer):&#10;        class Meta:&#10;            model = Category&#10;            fields = '__all__'&#10;&#10;2. categories/views.py API 결과를 반환해주는 View 클래스들 생성(generic 이용)&#10;&#10;    from rest_framework import generics&#10;    &#10;    # Create your views here.&#10;    from .models import Category&#10;    from .serializers import CategorySerializer&#10;    &#10;    &#10;    class CategoryList(generics.ListCreateAPIView):&#10;        queryset = Category.objects.all()&#10;        serializer_class = CategorySerializer&#10;    &#10;    &#10;    class CategoryListByOwner(generics.ListAPIView):&#10;        serializer_class = CategorySerializer&#10;    &#10;        def get_queryset(self):&#10;            owner = self.kwargs['owner']&#10;            return Category.objects.filter(owner=owner, is_deleted=False).order_by('-created_at')&#10;    &#10;    &#10;    class CategoryDetail(generics.RetrieveUpdateDestroyAPIView):&#10;        queryset = Category.objects.all()&#10;        serializer_class = CategorySerializer&#10;&#10;3. categories/urls.py url 연결&#10;&#10;    from django.urls import path&#10;    from rest_framework.urlpatterns import format_suffix_patterns&#10;    &#10;    from .views import *&#10;    &#10;    urlpatterns = [&#10;        path('categories/', CategoryList.as_view()),                     # 카테고리 전체 목록, 1개 생성 &#10;        path('categories/&lt;slug:owner&gt;', CategoryListByOwner.as_view()),  # owner 의 카테고리 목록&#10;        path('categories/&lt;int:pk&gt;/', CategoryDetail.as_view())           # id 로 get, put, patch, delete 지원&#10;    ]&#10;    &#10;4. conf/urls.py 앱에서 연결된 뷰들을 전체 프로젝트에 연결&#10;&#10;urlpatterns = [&#10;    # ...,&#10;    path('api/', include('categories.urls')),&#10;    # ...&#10;]&#10;&#10;* categories/models.py 수정 owner 유니크 설정 제거...">
+      <created>1553398285154</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1553398285154</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -266,10 +258,10 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.5005599" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4994401" visible="true" weight="0.26652452" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.4994401" visible="true" weight="0.26652452" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="0" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" sideWeight="0.49840087" visible="true" weight="0.3286334" />
+      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49840087" visible="true" weight="0.3286334" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50159913" side_tool="true" weight="0.3286334" />
       <window_info anchor="bottom" id="Python Console" order="3" weight="0.32922733" />
       <window_info anchor="bottom" id="Message" order="4" />
@@ -321,7 +313,8 @@
     <MESSAGE value="feature/INGREDIENTS_API #4 Serializer 클래스 생성하기&#10;&#10;1. IngredientsSerializer 생성&#10;&#10;모델 클래스를 API 형태로 보여주는 Serializer 클래스 생성&#10;&#10;- ingredients/serializers.py&#10;    from .models import Ingredients&#10;    from rest_framework import serializers&#10;    &#10;    &#10;    class IngredientsSerializer(serializers.ModelSerializer):&#10;        class Meta:&#10;            model = Ingredients&#10;            fields = '__all__'" />
     <MESSAGE value="feature/CATEGORY_API #1 카테고리 앱 생성&#10;&#10;1. python manage.py startapp categories&#10;- 그로 인해 생긴 코드들." />
     <MESSAGE value="feature/CATEGORY_API #2 카테고리 모델 생성 및 어드민 연결&#10;&#10;1. categories/models.py 카테고리 모델 생성(유저는 연결x)&#10;&#10;    from django.db import models&#10;    &#10;    &#10;    # Create your models here.&#10;    from django.utils.datetime_safe import datetime&#10;    &#10;    &#10;    class Category(models.Model):&#10;        name = models.CharField(max_length=200)&#10;        created_at = models.DateTimeField(default=datetime.now())&#10;        is_deleted = models.BooleanField(default=False)&#10;        owner = models.CharField(max_length=200, unique=True)  # 추후 user 로 변경&#10;    &#10;        def __str__(self):&#10;            return &quot;name: %s, created_at: %s. owner: %s&quot; % (self.name, self.created_at, self.owner)&#10;&#10;2. categories/admin.py 어드민 연결. 추후 어드민 커스터마이징 필요&#10;    &#10;    from django.contrib import admin&#10;    &#10;    # Register your models here.&#10;    from .models import Category&#10;    &#10;    &#10;    class CategoriesAdmin(admin.ModelAdmin):&#10;        list_display = ['id', 'name', 'created_at', 'is_deleted', 'owner']&#10;        list_editable = ['name', 'is_deleted']&#10;    &#10;    &#10;    admin.site.register(Category, CategoriesAdmin)&#10;    &#10;3. config/settings.py 프로젝트 연결&#10;&#10;    INSTALLED_APPS = [&#10;        # ...,&#10;        'categories'&#10;    ]&#10;    &#10;4. 모델 마이그레이션&#10;&#10;     python manage.py makemigrations&#10;     python manage.py migrate" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature/CATEGORY_API #2 카테고리 모델 생성 및 어드민 연결&#10;&#10;1. categories/models.py 카테고리 모델 생성(유저는 연결x)&#10;&#10;    from django.db import models&#10;    &#10;    &#10;    # Create your models here.&#10;    from django.utils.datetime_safe import datetime&#10;    &#10;    &#10;    class Category(models.Model):&#10;        name = models.CharField(max_length=200)&#10;        created_at = models.DateTimeField(default=datetime.now())&#10;        is_deleted = models.BooleanField(default=False)&#10;        owner = models.CharField(max_length=200, unique=True)  # 추후 user 로 변경&#10;    &#10;        def __str__(self):&#10;            return &quot;name: %s, created_at: %s. owner: %s&quot; % (self.name, self.created_at, self.owner)&#10;&#10;2. categories/admin.py 어드민 연결. 추후 어드민 커스터마이징 필요&#10;    &#10;    from django.contrib import admin&#10;    &#10;    # Register your models here.&#10;    from .models import Category&#10;    &#10;    &#10;    class CategoriesAdmin(admin.ModelAdmin):&#10;        list_display = ['id', 'name', 'created_at', 'is_deleted', 'owner']&#10;        list_editable = ['name', 'is_deleted']&#10;    &#10;    &#10;    admin.site.register(Category, CategoriesAdmin)&#10;    &#10;3. config/settings.py 프로젝트 연결&#10;&#10;    INSTALLED_APPS = [&#10;        # ...,&#10;        'categories'&#10;    ]&#10;    &#10;4. 모델 마이그레이션&#10;&#10;     python manage.py makemigrations&#10;     python manage.py migrate" />
+    <MESSAGE value="feature/CATEGORY_API #3 Serializers 및 View 만들기&#10;&#10;1. categories/serializers.py API 에서 모델을 JSON 직렬화시키는 CategorySerializer 생성 &#10;&#10;    from rest_framework import serializers&#10;    &#10;    from .models import Category&#10;    &#10;    &#10;    class CategorySerializer(serializers.ModelSerializer):&#10;        class Meta:&#10;            model = Category&#10;            fields = '__all__'&#10;&#10;2. categories/views.py API 결과를 반환해주는 View 클래스들 생성(generic 이용)&#10;&#10;    from rest_framework import generics&#10;    &#10;    # Create your views here.&#10;    from .models import Category&#10;    from .serializers import CategorySerializer&#10;    &#10;    &#10;    class CategoryList(generics.ListCreateAPIView):&#10;        queryset = Category.objects.all()&#10;        serializer_class = CategorySerializer&#10;    &#10;    &#10;    class CategoryListByOwner(generics.ListAPIView):&#10;        serializer_class = CategorySerializer&#10;    &#10;        def get_queryset(self):&#10;            owner = self.kwargs['owner']&#10;            return Category.objects.filter(owner=owner, is_deleted=False).order_by('-created_at')&#10;    &#10;    &#10;    class CategoryDetail(generics.RetrieveUpdateDestroyAPIView):&#10;        queryset = Category.objects.all()&#10;        serializer_class = CategorySerializer&#10;&#10;3. categories/urls.py url 연결&#10;&#10;    from django.urls import path&#10;    from rest_framework.urlpatterns import format_suffix_patterns&#10;    &#10;    from .views import *&#10;    &#10;    urlpatterns = [&#10;        path('categories/', CategoryList.as_view()),                     # 카테고리 전체 목록, 1개 생성 &#10;        path('categories/&lt;slug:owner&gt;', CategoryListByOwner.as_view()),  # owner 의 카테고리 목록&#10;        path('categories/&lt;int:pk&gt;/', CategoryDetail.as_view())           # id 로 get, put, patch, delete 지원&#10;    ]&#10;    &#10;4. conf/urls.py 앱에서 연결된 뷰들을 전체 프로젝트에 연결&#10;&#10;urlpatterns = [&#10;    # ...,&#10;    path('api/', include('categories.urls')),&#10;    # ...&#10;]&#10;&#10;* categories/models.py 수정 owner 유니크 설정 제거..." />
+    <option name="LAST_COMMIT_MESSAGE" value="feature/CATEGORY_API #3 Serializers 및 View 만들기&#10;&#10;1. categories/serializers.py API 에서 모델을 JSON 직렬화시키는 CategorySerializer 생성 &#10;&#10;    from rest_framework import serializers&#10;    &#10;    from .models import Category&#10;    &#10;    &#10;    class CategorySerializer(serializers.ModelSerializer):&#10;        class Meta:&#10;            model = Category&#10;            fields = '__all__'&#10;&#10;2. categories/views.py API 결과를 반환해주는 View 클래스들 생성(generic 이용)&#10;&#10;    from rest_framework import generics&#10;    &#10;    # Create your views here.&#10;    from .models import Category&#10;    from .serializers import CategorySerializer&#10;    &#10;    &#10;    class CategoryList(generics.ListCreateAPIView):&#10;        queryset = Category.objects.all()&#10;        serializer_class = CategorySerializer&#10;    &#10;    &#10;    class CategoryListByOwner(generics.ListAPIView):&#10;        serializer_class = CategorySerializer&#10;    &#10;        def get_queryset(self):&#10;            owner = self.kwargs['owner']&#10;            return Category.objects.filter(owner=owner, is_deleted=False).order_by('-created_at')&#10;    &#10;    &#10;    class CategoryDetail(generics.RetrieveUpdateDestroyAPIView):&#10;        queryset = Category.objects.all()&#10;        serializer_class = CategorySerializer&#10;&#10;3. categories/urls.py url 연결&#10;&#10;    from django.urls import path&#10;    from rest_framework.urlpatterns import format_suffix_patterns&#10;    &#10;    from .views import *&#10;    &#10;    urlpatterns = [&#10;        path('categories/', CategoryList.as_view()),                     # 카테고리 전체 목록, 1개 생성 &#10;        path('categories/&lt;slug:owner&gt;', CategoryListByOwner.as_view()),  # owner 의 카테고리 목록&#10;        path('categories/&lt;int:pk&gt;/', CategoryDetail.as_view())           # id 로 get, put, patch, delete 지원&#10;    ]&#10;    &#10;4. conf/urls.py 앱에서 연결된 뷰들을 전체 프로젝트에 연결&#10;&#10;urlpatterns = [&#10;    # ...,&#10;    path('api/', include('categories.urls')),&#10;    # ...&#10;]&#10;&#10;* categories/models.py 수정 owner 유니크 설정 제거..." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/manage.py">
@@ -497,7 +490,7 @@
     <entry file="file://$PROJECT_DIR$/categories/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -515,8 +508,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/categories/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="93" lean-forward="true" selection-start-line="17" selection-start-column="93" selection-end-line="17" selection-end-column="93" />
+        <state relative-caret-position="342">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
