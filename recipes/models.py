@@ -20,7 +20,8 @@ class Recipe(models.Model):
         return "Recipe[ owner: %s, category: %s, created_at: %s]" % (self.owner, self.category.name, self.created_at)
 
     def recipe_summary(self):
-        return self.recipesummary
+        summary = self.recipesummary
+        return "%s : %s" % (summary.title, summary.content)
 
     def recipe_tools(self):
         tools = RecipeTools.objects.filter(recipe=self)
