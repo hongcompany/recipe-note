@@ -4,6 +4,7 @@ from django.db import models
 from django.utils.datetime_safe import datetime
 
 from categories.models import Category
+from ingredients.models import Ingredients
 from tools.models import Tools
 
 
@@ -17,7 +18,7 @@ class Recipe(models.Model):
     is_deleted = models.BooleanField(default=False)
 
     def __str__(self):
-        return "Recipe[ owner: %s, category: %s, created_at: %s]" % (self.owner, self.category.name, self.created_at)
+        return "Recipe[ owner: %s, summary: %s, created_at: %s]" % (self.owner, self.recipe_summary(), self.created_at)
 
     def recipe_summary(self):
         summary = self.recipesummary
@@ -44,7 +45,7 @@ class RecipeSummary(models.Model):
     recipe = models.OneToOneField(Recipe, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     content = models.CharField(max_length=300)
-    level = models.CharField(max_length=20, choices=[(tag.value, tag) for tag in Level])
+    level = models.CharField(max_length=20, choices=[(tag.value, tag) for tag in Level], default=Level.BEGINNER)
 
     # 추후 이미지 정보 추가
 
@@ -59,31 +60,35 @@ class RecipeTools(models.Model):
     def __str__(self):
         return self.tool.name
 
-# class DetailType(Enum):
-#     basic = "BASIC"
-#     fermentation = "FERMENTATION"
-#     dough = "DOUGH"
-#     oven = "OVEN"
-#
-# class RecipeDetails(models.Model):
-#     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
-#     description = models.CharField(max_length=200)
-#     timer = models.IntegerField(null=True)
-#     temperature = models.FloatField(default=0.0)
-#     type = models.CharField(max_length=50, choices=[(tag, tag.value) for tag in DetailType])
-#
-#     # 추후 이미지 정보 추가
-#     def __str__(self):
-#         return "Detail[description: %s, timer: %d, temperature: %f, type: %s]" % (self.description, self.timer, self.temperature, self.type)
-#
-#     def get_recipe_details_ingredients(self):
-#         return self.recipedetailsingredients(id=self.id)
-#
-#
-# class RecipeDetailsIngredients(models.Model):
-#     recipe_detail = models.ForeignKey(RecipeDetails, on_delete=models.CASCADE)
-#     ingredient = models.ForeignKey(Ingredients, on_delete=models.DO_NOTHING)
-#     amount = models.CharField(max_length=20)
-#
-#     def __str__(self):
-#         return "Ingredient[name: %s, amount: %s]" % (self.ingredient.name, self.amount)
+
+class DetailType(Enum):
+    BASIC = "BASIC"
+    FERMENTATION = "FERMENTATION"
+    DOUGH = "DOUGH"
+    OVEN = "OVEN"
+
+
+class RecipeDetails(models.Model):
+    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
+    description = models.CharField(max_length=200)
+    timer = models.IntegerField(default=-1)
+    temperature = models.FloatField(default=0.0)
+    type = models.CharField(max_length=50, choices=[(tag.value, tag) for tag in DetailType], default=DetailType.BASIC)
+
+    # 추후 이미지 정보 추가
+    def __str__(self):
+        return "Detail[description: %s, timer: %d, temperature: %f, type: %s]" % (
+            self.description, self.timer, self.temperature, self.type)
+
+    def recipe_details_ingredients(self):
+        ingredients = RecipeDetailsIngredients.objects.filter(recipe_detail=self)
+        return [i.__str__() for i in ingredients]
+
+
+class RecipeDetailsIngredients(models.Model):
+    recipe_detail = models.ForeignKey(RecipeDetails, on_delete=models.CASCADE)
+    ingredient = models.ForeignKey(Ingredients, on_delete=models.DO_NOTHING)
+    amount = models.CharField(max_length=20)
+
+    def __str__(self):
+        return "name: %s, amount: %s" % (self.ingredient.name, self.amount)
