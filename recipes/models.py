@@ -22,17 +22,18 @@ class Recipe(models.Model):
 
     def recipe_summary(self):
         summary = self.recipesummary
-        return "%s : %s" % (summary.title, summary.content)
+        return summary
 
     def recipe_tools(self):
         tools = RecipeTools.objects.filter(recipe=self)
-        return [t.__str__() for t in tools]
+        return tools
 
     def category_info(self):
         return "%s:%s" % (self.owner, self.category.name)
 
-    # def recipedetails(self):
-    #     return self.recipedetails_set(id=self.id)
+    def recipe_details(self):
+        details = RecipeDetails.objects.filter(recipe=self)
+        return details
 
 
 class Level(Enum):
@@ -82,7 +83,7 @@ class RecipeDetails(models.Model):
 
     def recipe_details_ingredients(self):
         ingredients = RecipeDetailsIngredients.objects.filter(recipe_detail=self)
-        return [i.__str__() for i in ingredients]
+        return ingredients
 
 
 class RecipeDetailsIngredients(models.Model):
