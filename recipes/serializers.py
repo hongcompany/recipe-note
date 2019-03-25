@@ -37,7 +37,7 @@ class RecipeDetailsSerializers(serializers.ModelSerializer):
 
 
 class RecipeSerializers(serializers.ModelSerializer):
-    category = CategorySerializer(many=False, read_only=True)
+    category = CategorySerializer(many=False, read_only=False)
     recipe_summary = RecipeSummarySerializers(many=False, read_only=False)
     recipe_tools = RecipeToolsSerializers(many=True, read_only=False)
     recipe_details = RecipeDetailsSerializers(many=True, read_only=False)
