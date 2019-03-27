@@ -9,7 +9,3 @@ COPY . /app/
 
 # to install requirements
 RUN pip3 install -r requirements.txt
-
-# to run python code
-RUN python3 manage.py runserver
-EXPOSE 80 8080
