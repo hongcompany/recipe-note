@@ -37,3 +37,5 @@ python manage.py runserver
 
 
 #### Infra:
+
+1. Github - Jenkins - Dockerhub
