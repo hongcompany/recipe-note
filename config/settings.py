@@ -25,7 +25,8 @@ SECRET_KEY = 'c8mcgdubo%6t2r0i1urmrr9ie0&22up38+czhcrrx75gf#2%93'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ['211.252.86.170']
 
 
 # Application definition
@@ -43,9 +44,11 @@ INSTALLED_APPS = [
     "rest_framework_swagger",
     # my apps
     'tools',
+
     'ingredients',
     'categories',
     "recipes",
+
 ]
 
 MIDDLEWARE = [
