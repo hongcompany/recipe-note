@@ -23,6 +23,6 @@ urlpatterns = [
 
     path('api/', include('ingredients.urls')),
     path('api/', include('categories.urls')),
-
+    path('api/', include('recipes.urls')),
     path("api/doc", get_swagger_view(title="Recipe Note API Manual"))
 ]
