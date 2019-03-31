@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from rest_framework import generics
 
 from .serializers import *
@@ -21,3 +22,8 @@ class RecipeListByOwner(generics.ListAPIView):
 class RecipeDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Tools.objects.all()
     serializer_class = RecipeSerializers
+
+
+def index(request):
+    name = "" # 여기 바꿔서 보여주시오.
+    return render(request, 'recipes/index.html', { 'name': name })
