@@ -17,10 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework_swagger.views import get_swagger_view
 
+from recipes.views import index
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', index, name='index'),
     path('api/', include('tools.urls')),
-
     path('api/', include('ingredients.urls')),
     path('api/', include('categories.urls')),
     path('api/', include('recipes.urls')),
