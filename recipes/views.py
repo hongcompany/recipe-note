@@ -25,5 +25,5 @@ class RecipeDetail(generics.RetrieveUpdateDestroyAPIView):
 
 
 def index(request):
-    name = "" # 여기 바꿔서 보여주시오.
+    name = "Hong Jun ho" # 여기 바꿔서 보여주시오.
     return render(request, 'recipes/index.html', { 'name': name })
