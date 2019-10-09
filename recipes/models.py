@@ -10,19 +10,26 @@ from tools.models import Tools
 
 # Create your models here.
 
+class Level(Enum):
+    BEGINNER = "BEGINNER"
+    INTERMEDIATE = "INTERMEDIATE"
+    EXPERT = "EXPERT"
+
+
 class Recipe(models.Model):
-    owner = models.CharField(max_length=200)  # 추후 user로 변경됨
+    # owner = models.CharField(max_length=200)  # 추후 user로 변경됨
     category = models.ForeignKey(Category, on_delete=models.DO_NOTHING)
-    created_at = models.DateTimeField(default=datetime.now())
+
+    title = models.CharField(max_length=200)
+    content = models.CharField(max_length=300)
+    level = models.CharField(max_length=20, choices=[(tag.value, tag) for tag in Level], default=Level.BEGINNER)
     is_template = models.BooleanField(default=False)
     is_deleted = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return "Recipe[ owner: %s, summary: %s, created_at: %s]" % (self.owner, self.recipe_summary(), self.created_at)
-
-    def recipe_summary(self):
-        summary = self.recipesummary
-        return summary
+        return ""
 
     def recipe_tools(self):
         tools = RecipeTools.objects.filter(recipe=self)
@@ -34,24 +41,6 @@ class Recipe(models.Model):
     def recipe_details(self):
         details = RecipeDetails.objects.filter(recipe=self)
         return details
-
-
-class Level(Enum):
-    BEGINNER = "BEGINNER"
-    INTERMEDIATE = "INTERMEDIATE"
-    EXPERT = "EXPERT"
-
-
-class RecipeSummary(models.Model):
-    recipe = models.OneToOneField(Recipe, on_delete=models.CASCADE)
-    title = models.CharField(max_length=200)
-    content = models.CharField(max_length=300)
-    level = models.CharField(max_length=20, choices=[(tag.value, tag) for tag in Level], default=Level.BEGINNER)
-
-    # 추후 이미지 정보 추가
-
-    def __str__(self):
-        return self.title
 
 
 class RecipeTools(models.Model):
@@ -73,13 +62,12 @@ class RecipeDetails(models.Model):
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
     description = models.CharField(max_length=200)
     timer = models.IntegerField(default=-1)
-    temperature = models.FloatField(default=0.0)
+    # temperature = models.FloatField(default=0.0)
     type = models.CharField(max_length=50, choices=[(tag.value, tag) for tag in DetailType], default=DetailType.BASIC)
 
     # 추후 이미지 정보 추가
     def __str__(self):
-        return "Detail[description: %s, timer: %d, temperature: %f, type: %s]" % (
-            self.description, self.timer, self.temperature, self.type)
+        return ""
 
     def recipe_details_ingredients(self):
         ingredients = RecipeDetailsIngredients.objects.filter(recipe_detail=self)
