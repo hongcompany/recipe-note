@@ -13,43 +13,33 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname( os.path.dirname( os.path.dirname( os.path.abspath(__file__) ) ) )
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'c8mcgdubo%6t2r0i1urmrr9ie0&22up38+czhcrrx75gf#2%93'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-
-ALLOWED_HOSTS = ['211.252.86.170', '127.0.0.1']
-
+ALLOWED_HOSTS = []
 
 # Application definition
+MY_APPS = [
+    'tools',
+    'ingredients',
+    'categories',
+    "recipes",
+]
 
-INSTALLED_APPS = [
-    # django basic
+THIRD_PARTY_APPS = [
+    'rest_framework',
+    "rest_framework_swagger",
+]
+
+DJANGO_BASE_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # django-rest-framework
-    'rest_framework',
-    "rest_framework_swagger",
-    # my apps
-    'tools',
-
-    'ingredients',
-    'categories',
-    "recipes",
-
 ]
+
+INSTALLED_APPS = DJANGO_BASE_APPS + THIRD_PARTY_APPS + MY_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
