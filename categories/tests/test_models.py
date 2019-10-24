@@ -1,9 +1,9 @@
-from django.test import TestCase
+from django.test import TestCase, tag
 from categories.models import Category
 
 # Create your tests here.
 class CategoryTest(TestCase):
-    """category model test"""
+    """category model test (추후, 유저 정보 추가해서 테스트 진행 필요)"""
 
     def setUp(self):
         Category.objects.create(name='빵')
@@ -13,6 +13,10 @@ class CategoryTest(TestCase):
     def test_get_all_categories(self):
         categories = Category.objects.all()
         self.assertEqual(len(categories), 3)
+
+    @tag("owner")
+    def test_get_categories_by_owner(self):
+        pass
 
     def test_get_single_category(self):
         category = Category.objects.get(pk=1)
@@ -39,8 +43,6 @@ class CategoryTest(TestCase):
         categories = Category.objects.all()
         self.assertEqual(len(categories), 2)
 
-    # 추후 유저이름으로 카테고리를 찾는 메소드 필요
-    
     def tearDown(self):
         queryset = Category.objects.all()
         queryset.delete()
