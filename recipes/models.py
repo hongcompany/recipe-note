@@ -9,20 +9,22 @@ from tools.models import Tools
 
 
 # Create your models here.
-
-class Level(Enum):
-    BEGINNER = "BEGINNER"
-    INTERMEDIATE = "INTERMEDIATE"
-    EXPERT = "EXPERT"
-
-
 class Recipe(models.Model):
+
+    BEGINNER = "B"
+    INTERMEDIATE = "I"
+    EXPERT = "E"
+    LEVEL = [
+        (BEGINNER, 'Beginner'),
+        (INTERMEDIATE, 'Intermediate'),
+        (EXPERT, 'Expert'),
+    ]
+        
     # owner = models.CharField(max_length=200)  # 추후 user로 변경됨
     category = models.ForeignKey(Category, on_delete=models.DO_NOTHING)
-
     title = models.CharField(max_length=200)
     content = models.CharField(max_length=300)
-    level = models.CharField(max_length=20, choices=[(tag.value, tag) for tag in Level], default=Level.BEGINNER)
+    level = models.CharField(max_length=1, choices=LEVEL, default=BEGINNER)
     is_template = models.BooleanField(default=False)
     is_deleted = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
