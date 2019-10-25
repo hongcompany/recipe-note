@@ -6,11 +6,11 @@ from .serializers import IngredientSerializer
 
 # Create your views here.
 
-class IngredientList(generics.ListCreateAPIView):
+class IngredientListCreateView(generics.ListCreateAPIView):
     queryset = Ingredient.objects.all()
     serializer_class = IngredientSerializer
 
 
-class IngredientsDetail(generics.RetrieveUpdateDestroyAPIView):
+class IngredientRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Ingredient.objects.all()
     serializer_class = IngredientSerializer
