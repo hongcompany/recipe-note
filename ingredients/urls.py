@@ -4,6 +4,6 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from .views import *
 
 urlpatterns = [
-    path('ingredients/', IngredientList.as_view()),
-    path('ingredients/<int:pk>/', IngredientsDetail.as_view())
+    path('', IngredientList.as_view()),
+    path('<int:pk>/', IngredientsDetail.as_view())
 ]
