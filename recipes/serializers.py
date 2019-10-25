@@ -3,7 +3,7 @@ from rest_framework import serializers
 from .models import *
 from tools.serializers import ToolsSerializer
 from categories.serializers import CategorySerializer
-from ingredients.serializers import IngredientsSerializer
+from ingredients.serializers import IngredientSerializer
 
 
 class RecipeToolsSerializers(serializers.ModelSerializer):
@@ -14,16 +14,16 @@ class RecipeToolsSerializers(serializers.ModelSerializer):
         fields = ['tool']
 
 
-class RecipeIngredientsSerializers(serializers.ModelSerializer):
-    ingredient = IngredientsSerializer(many=False, read_only=True)
+class RecipeIngredientSerializers(serializers.ModelSerializer):
+    ingredient = IngredientSerializer(many=False, read_only=True)
 
     class Meta:
-        model = RecipeDetailsIngredients
+        model = RecipeDetailsIngredient
         fields = ['ingredient', 'amount']
 
 
 class RecipeDetailsSerializers(serializers.ModelSerializer):
-    recipe_details_ingredients = RecipeIngredientsSerializers(many=True, read_only=True)
+    recipe_details_ingredients = RecipeIngredientSerializers(many=True, read_only=True)
 
     class Meta:
         model = RecipeDetails

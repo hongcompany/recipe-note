@@ -15,8 +15,8 @@ class RecipeAdmin(admin.ModelAdmin):
     inlines = [ToolsInline]
 
 
-class IngredientsInline(admin.TabularInline):
-    model = RecipeDetailsIngredients
+class IngredientInline(admin.TabularInline):
+    model = RecipeDetailsIngredient
     extra = 3
 
 
@@ -25,7 +25,7 @@ class RecipeDetailsAdmin(admin.ModelAdmin):
     list_editable = ['description', 'timer', 'type']
     model = RecipeDetails
 
-    inlines = [IngredientsInline]
+    inlines = [IngredientInline]
 
 
 admin.site.register(Recipe, RecipeAdmin)

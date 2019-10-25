@@ -4,7 +4,7 @@ from django.db import models
 from django.utils.datetime_safe import datetime
 
 from categories.models import Category
-from ingredients.models import Ingredients
+from ingredients.models import Ingredient
 from tools.models import Tools
 
 
@@ -70,13 +70,13 @@ class RecipeDetails(models.Model):
         return ""
 
     def recipe_details_ingredients(self):
-        ingredients = RecipeDetailsIngredients.objects.filter(recipe_detail=self)
+        ingredients = RecipeDetailsIngredient.objects.filter(recipe_detail=self)
         return ingredients
 
 
-class RecipeDetailsIngredients(models.Model):
+class RecipeDetailsIngredient(models.Model):
     recipe_detail = models.ForeignKey(RecipeDetails, on_delete=models.CASCADE)
-    ingredient = models.ForeignKey(Ingredients, on_delete=models.DO_NOTHING)
+    ingredient = models.ForeignKey(Ingredient, on_delete=models.DO_NOTHING)
     amount = models.CharField(max_length=20)
 
     def __str__(self):
