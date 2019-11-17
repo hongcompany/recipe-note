@@ -3,13 +3,7 @@ from rest_framework import serializers
 from .models import *
 from tools.serializers import ToolsSerializer
 from categories.serializers import CategorySerializer
-from ingredients.serializers import IngredientsSerializer
-
-
-class RecipeSummarySerializers(serializers.ModelSerializer):
-    class Meta:
-        model = RecipeSummary
-        fields = ('title', 'content', 'level')
+from ingredients.serializers import IngredientSerializer
 
 
 class RecipeToolsSerializers(serializers.ModelSerializer):
@@ -20,16 +14,16 @@ class RecipeToolsSerializers(serializers.ModelSerializer):
         fields = ['tool']
 
 
-class RecipeIngredientsSerializers(serializers.ModelSerializer):
-    ingredient = IngredientsSerializer(many=False, read_only=True)
+class RecipeIngredientSerializers(serializers.ModelSerializer):
+    ingredient = IngredientSerializer(many=False, read_only=True)
 
     class Meta:
-        model = RecipeDetailsIngredients
+        model = RecipeDetailsIngredient
         fields = ['ingredient', 'amount']
 
 
 class RecipeDetailsSerializers(serializers.ModelSerializer):
-    recipe_details_ingredients = RecipeIngredientsSerializers(many=True, read_only=True)
+    recipe_details_ingredients = RecipeIngredientSerializers(many=True, read_only=True)
 
     class Meta:
         model = RecipeDetails
@@ -38,7 +32,6 @@ class RecipeDetailsSerializers(serializers.ModelSerializer):
 
 class RecipeSerializers(serializers.ModelSerializer):
     category = CategorySerializer(many=False, read_only=False)
-    recipe_summary = RecipeSummarySerializers(many=False, read_only=False)
     recipe_tools = RecipeToolsSerializers(many=True, read_only=False)
     recipe_details = RecipeDetailsSerializers(many=True, read_only=False)
 

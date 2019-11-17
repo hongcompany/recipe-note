@@ -5,7 +5,7 @@ from .models import Category
 
 
 class CategoriesAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name', 'created_at', 'is_deleted', 'owner']
+    list_display = ['id', 'name', 'created_at', 'updated_at', 'is_deleted']
     list_editable = ['name', 'is_deleted']
 
 

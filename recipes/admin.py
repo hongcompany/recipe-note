@@ -4,32 +4,28 @@ from django.contrib import admin
 from .models import *
 
 
-class SummaryInline(admin.TabularInline):
-    model = RecipeSummary
-
-
 class ToolsInline(admin.TabularInline):
     model = RecipeTools
     extra = 3
 
 
 class RecipeAdmin(admin.ModelAdmin):
-    list_display = ['id', "recipe_summary", "recipe_tools", "category_info", "created_at", "is_template", "is_deleted"]
-    list_editable = ['is_template', "is_deleted"]
-    inlines = [SummaryInline, ToolsInline]
+    list_display = ['id', "recipe_tools", "category_info", "created_at", "is_template", "is_deleted"]
+    list_editable = ["is_deleted"]
+    inlines = [ToolsInline]
 
 
-class IngredientsInline(admin.TabularInline):
-    model = RecipeDetailsIngredients
+class IngredientInline(admin.TabularInline):
+    model = RecipeDetailsIngredient
     extra = 3
 
 
 class RecipeDetailsAdmin(admin.ModelAdmin):
-    list_display = ['id', 'recipe', 'description', 'timer', 'temperature', 'type', 'recipe_details_ingredients']
-    list_editable = ['description', 'timer', 'temperature', 'type']
+    list_display = ['id', 'recipe', 'description', 'timer', 'type', 'recipe_details_ingredients']
+    list_editable = ['description', 'timer', 'type']
     model = RecipeDetails
 
-    inlines = [IngredientsInline]
+    inlines = [IngredientInline]
 
 
 admin.site.register(Recipe, RecipeAdmin)

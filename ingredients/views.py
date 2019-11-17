@@ -1,16 +1,16 @@
 from rest_framework import generics
 
-from .models import Ingredients
-from .serializers import IngredientsSerializer
+from .models import Ingredient
+from .serializers import IngredientSerializer
 
 
 # Create your views here.
 
-class IngredientList(generics.ListCreateAPIView):
-    queryset = Ingredients.objects.all()
-    serializer_class = IngredientsSerializer
+class IngredientListCreateView(generics.ListCreateAPIView):
+    queryset = Ingredient.objects.all()
+    serializer_class = IngredientSerializer
 
 
-class IngredientsDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Ingredients.objects.all()
-    serializer_class = IngredientsSerializer
+class IngredientRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Ingredient.objects.all()
+    serializer_class = IngredientSerializer

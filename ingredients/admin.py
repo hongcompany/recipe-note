@@ -1,12 +1,12 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Ingredients
+from .models import Ingredient
 
 
-class IngredientsAdmin(admin.ModelAdmin):
+class IngredientAdmin(admin.ModelAdmin):
     list_display = ['id', 'name']
     list_editable = ['name']
 
 
-admin.site.register(Ingredients, IngredientsAdmin)
+admin.site.register(Ingredient, IngredientAdmin)

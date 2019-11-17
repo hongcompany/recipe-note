@@ -5,7 +5,7 @@ from .models import Category
 from .serializers import CategorySerializer
 
 
-class CategoryList(generics.ListCreateAPIView):
+class CategoryListCreateView(generics.ListCreateAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
@@ -18,6 +18,6 @@ class CategoryListByOwner(generics.ListAPIView):
         return Category.objects.filter(owner=owner, is_deleted=False).order_by('-created_at')
 
 
-class CategoryDetail(generics.RetrieveUpdateDestroyAPIView):
+class CategoryRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
